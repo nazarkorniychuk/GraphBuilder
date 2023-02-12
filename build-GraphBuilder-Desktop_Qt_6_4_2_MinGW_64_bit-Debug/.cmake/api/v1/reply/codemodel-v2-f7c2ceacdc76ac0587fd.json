@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-0709a3c3c2f2a379b89c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GraphBuilder",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GraphBuilder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GraphBuilder-Debug-70d12f0e37045973a0fc.json",
+					"name" : "GraphBuilder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GraphBuilder_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GraphBuilder_autogen-Debug-44455c0aa92f783b99ed.json",
+					"name" : "GraphBuilder_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GraphBuilder_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GraphBuilder_autogen_timestamp_deps-Debug-766e5922c51201412fbe.json",
+					"name" : "GraphBuilder_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/nkorn/Documents/GraphBuilder/build-GraphBuilder-Desktop_Qt_6_4_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
