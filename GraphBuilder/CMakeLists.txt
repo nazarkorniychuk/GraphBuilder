@@ -16,9 +16,8 @@ set(TS_FILES GraphBuilder_uk_UA.ts)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        widget.cpp
+        widget.h
         ${TS_FILES}
 )
 

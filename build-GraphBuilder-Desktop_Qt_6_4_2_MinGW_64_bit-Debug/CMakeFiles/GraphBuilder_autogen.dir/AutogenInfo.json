@@ -329,9 +329,9 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/mainwindow.h",
+			"C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/widget.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"EWIEGA46WW/moc_widget.cpp",
 			null
 		]
 	],
@@ -410,7 +410,7 @@
 			null
 		],
 		[
-			"C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/mainwindow.cpp",
+			"C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/widget.cpp",
 			"MU",
 			null
 		]

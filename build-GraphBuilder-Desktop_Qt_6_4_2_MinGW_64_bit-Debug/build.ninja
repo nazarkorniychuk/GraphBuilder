@@ -69,9 +69,9 @@ build CMakeFiles/GraphBuilder.dir/main.cpp.obj: CXX_COMPILER__GraphBuilder_Debug
   TARGET_COMPILE_PDB = CMakeFiles\GraphBuilder.dir\
   TARGET_PDB = GraphBuilder.pdb
 
-build CMakeFiles/GraphBuilder.dir/mainwindow.cpp.obj: CXX_COMPILER__GraphBuilder_Debug C$:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/mainwindow.cpp || cmake_object_order_depends_target_GraphBuilder
+build CMakeFiles/GraphBuilder.dir/widget.cpp.obj: CXX_COMPILER__GraphBuilder_Debug C$:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/widget.cpp || cmake_object_order_depends_target_GraphBuilder
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GraphBuilder.dir\mainwindow.cpp.obj.d
+  DEP_FILE = CMakeFiles\GraphBuilder.dir\widget.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17
   INCLUDES = -IC:/Users/nkorn/Documents/GraphBuilder/build-GraphBuilder-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/GraphBuilder_autogen/include -isystem C:/Qt/6.4.2/mingw_64/include/QtCore -isystem C:/Qt/6.4.2/mingw_64/include -isystem C:/Qt/6.4.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.4.2/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GraphBuilder.dir
@@ -87,7 +87,7 @@ build CMakeFiles/GraphBuilder.dir/mainwindow.cpp.obj: CXX_COMPILER__GraphBuilder
 #############################################
 # Link the executable GraphBuilder.exe
 
-build GraphBuilder.exe: CXX_EXECUTABLE_LINKER__GraphBuilder_Debug CMakeFiles/GraphBuilder.dir/GraphBuilder_autogen/mocs_compilation.cpp.obj CMakeFiles/GraphBuilder.dir/main.cpp.obj CMakeFiles/GraphBuilder.dir/mainwindow.cpp.obj | C$:/Qt/6.4.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.4.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.2/mingw_64/lib/libQt6EntryPoint.a || GraphBuilder_autogen GraphBuilder_autogen_timestamp_deps
+build GraphBuilder.exe: CXX_EXECUTABLE_LINKER__GraphBuilder_Debug CMakeFiles/GraphBuilder.dir/GraphBuilder_autogen/mocs_compilation.cpp.obj CMakeFiles/GraphBuilder.dir/main.cpp.obj CMakeFiles/GraphBuilder.dir/widget.cpp.obj | C$:/Qt/6.4.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.4.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.2/mingw_64/lib/libQt6EntryPoint.a || GraphBuilder_autogen GraphBuilder_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.4.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.4.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.4.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.4.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -175,7 +175,7 @@ build GraphBuilder_autogen_timestamp_deps: phony CMakeFiles/GraphBuilder_autogen
 #############################################
 # Utility command for GraphBuilder_autogen
 
-build GraphBuilder_autogen: phony CMakeFiles/GraphBuilder_autogen GraphBuilder_autogen/include/ui_mainwindow.h GraphBuilder_autogen/timestamp GraphBuilder_autogen/mocs_compilation.cpp GraphBuilder_autogen_timestamp_deps
+build GraphBuilder_autogen: phony CMakeFiles/GraphBuilder_autogen GraphBuilder_autogen/timestamp GraphBuilder_autogen/mocs_compilation.cpp GraphBuilder_autogen_timestamp_deps
 
 
 #############################################
@@ -197,7 +197,7 @@ build CMakeFiles/GraphBuilder_autogen_timestamp_deps | ${cmake_ninja_workdir}CMa
 #############################################
 # Phony custom command for CMakeFiles\GraphBuilder_autogen
 
-build CMakeFiles/GraphBuilder_autogen GraphBuilder_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/GraphBuilder_autogen ${cmake_ninja_workdir}GraphBuilder_autogen/include/ui_mainwindow.h: phony GraphBuilder_autogen/timestamp || GraphBuilder_autogen_timestamp_deps
+build CMakeFiles/GraphBuilder_autogen | ${cmake_ninja_workdir}CMakeFiles/GraphBuilder_autogen: phony GraphBuilder_autogen/timestamp || GraphBuilder_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
