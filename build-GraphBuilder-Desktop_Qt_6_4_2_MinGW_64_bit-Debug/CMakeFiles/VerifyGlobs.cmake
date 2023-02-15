@@ -41,8 +41,9 @@ endif()
 # _directory_contents at C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:83 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/*.cpp")
 set(OLD_GLOB
+  "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/graphicsscene.cpp"
   "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/main.cpp"
-  "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/widget.cpp"
+  "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/mainwindow.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -61,7 +62,8 @@ endif()
 # _directory_contents at C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:83 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/*.h")
 set(OLD_GLOB
-  "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/widget.h"
+  "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/graphicsscene.h"
+  "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/mainwindow.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -161,6 +163,7 @@ endif()
 # _directory_contents at C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:83 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/*.ui")
 set(OLD_GLOB
+  "C:/Users/nkorn/Documents/GraphBuilder/GraphBuilder/mainwindow.ui"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
