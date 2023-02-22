@@ -16,6 +16,9 @@ public:
     virtual void mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent);
     MainWindow* parent;
     void UpdateScene();
+    void DeleteDot(int a);
+    bool isClicked = false;
+    int whereClicked;
 };
 
 #endif // GRAPHICSSCENE_H

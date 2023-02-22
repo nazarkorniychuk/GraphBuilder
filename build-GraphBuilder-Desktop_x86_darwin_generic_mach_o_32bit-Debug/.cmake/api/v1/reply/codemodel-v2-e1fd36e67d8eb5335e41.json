@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-b2d5ba57ec1097a8d09a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GraphBuilder",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GraphBuilder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GraphBuilder-Debug-3eba5c0a77159297ee9b.json",
+					"name" : "GraphBuilder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GraphBuilder_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GraphBuilder_autogen-Debug-1428435227acef9d0cf7.json",
+					"name" : "GraphBuilder_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/nkorniychuk/Documents/GraphBuilder/build-GraphBuilder-Desktop_x86_darwin_generic_mach_o_32bit-Debug",
+		"source" : "/Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
