@@ -1988,6 +1988,8 @@ CMakeFiles/GraphBuilder.dir/mainwindow.cpp.o
  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qactiongroup.h
  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QStatusBar
  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qstatusbar.h
+ /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QToolBar
+ /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qtoolbar.h
  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QWidget
  /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/graphicsscene.h
  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QDebug
@@ -1999,4 +2001,16 @@ CMakeFiles/GraphBuilder.dir/mainwindow.cpp.o
  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qpainterpath.h
  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QGraphicsPathItem
  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/QPainterPath
+ /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QMenu
+ /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QAction
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QFile
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfile.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfiledevice.h
+ /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QFileDialog
+ /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qfiledialog.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdir.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfileinfo.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qurl.h
+ /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qdialog.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QString
 

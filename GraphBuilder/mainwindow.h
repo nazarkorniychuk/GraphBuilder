@@ -22,7 +22,9 @@ public:
     ~MainWindow();
     QPoint* Graph[50][50]{};
     int NumberOfDots = 0;
-
+public slots:
+    void open();
+    void save();
 private:
     Ui::MainWindow *ui;
 };

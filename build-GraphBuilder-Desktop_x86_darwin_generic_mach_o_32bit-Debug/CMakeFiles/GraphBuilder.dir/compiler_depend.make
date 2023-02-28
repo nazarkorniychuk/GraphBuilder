@@ -1984,6 +1984,8 @@ CMakeFiles/GraphBuilder.dir/mainwindow.cpp.o: /Users/nkorniychuk/Documents/Graph
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qactiongroup.h \
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QStatusBar \
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qstatusbar.h \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QToolBar \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qtoolbar.h \
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QWidget \
   /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/graphicsscene.h \
   /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QDebug \
@@ -1994,8 +1996,32 @@ CMakeFiles/GraphBuilder.dir/mainwindow.cpp.o: /Users/nkorniychuk/Documents/Graph
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
   /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qpainterpath.h \
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QGraphicsPathItem \
-  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/QPainterPath
+  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/QPainterPath \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QMenu \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QAction \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QFile \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfile.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfiledevice.h \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QFileDialog \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qfiledialog.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdir.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfileinfo.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qurl.h \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qdialog.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QString
 
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/QString:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qdialog.h:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfileinfo.h:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qfiledialog.h:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/QFile:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QAction:
 
 /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QWidget:
 
@@ -2006,6 +2032,8 @@ CMakeFiles/GraphBuilder.dir/mainwindow.cpp.o: /Users/nkorniychuk/Documents/Graph
 GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qtranslator.h:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qurl.h:
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QLocale:
 
@@ -2032,6 +2060,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/graphicsscene.cpp:
 
 /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qvector2d.h:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qtoolbar.h:
 
 /opt/local/libexec/qt5/lib/QtGui.framework/Headers/QVector2D:
 
@@ -2443,6 +2473,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
 
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QFileDialog:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/make_heap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
@@ -2488,6 +2520,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ratio:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ctime:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfile.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/wctype.h:
 
@@ -2627,6 +2661,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/limits:
 
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QToolBar:
+
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qobject.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ctype.h:
@@ -2745,6 +2781,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/alloca.h:
 
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdir.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/libkern/_OSByteOrder.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/all_of.h:
@@ -2760,6 +2798,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/machine/endian.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_va_list.h:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfiledevice.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_mode_t.h:
 
@@ -2884,6 +2924,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qicon.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QMenu:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/cmp.h:
 

@@ -9,7 +9,7 @@ void GraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
     int radius = 20;
 
-    if(this->parent->NumberOfDots < 49){
+    if(this->parent->NumberOfDots <= 49){
         bool flag = true;
         for(int i = 0; i < this->parent->NumberOfDots; ++i){
             if(((this->parent->Graph[i][i]->x() - mouseEvent->scenePos().x() + radius)*(this->parent->Graph[i][i]->x() - mouseEvent->scenePos().x() + radius) + (this->parent->Graph[i][i]->y() - mouseEvent->scenePos().y() + radius)*(this->parent->Graph[i][i]->y() - mouseEvent->scenePos().y() + radius)) < (radius) * (radius)){
@@ -56,20 +56,24 @@ void GraphicsScene::UpdateScene()
     int radius = 20;
     this->clear();
     for(int i = 0; i < this->parent->NumberOfDots; ++i){
-        QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem(this->parent->Graph[i][i]->x(), this->parent->Graph[i][i]->y(), radius*2, radius*2);
-        if(i==whereClicked){
-            ellipse->setBrush(Qt::green);
-        }
-        QGraphicsTextItem *text = new QGraphicsTextItem(QString::number(i+1));
-        text->setPos(this->parent->Graph[i][i]->x() + 12, this->parent->Graph[i][i]->y()+ 8);
-        this->addItem(ellipse);
-        this->addItem(text);
         for(int j = i+1; j < this->parent->NumberOfDots; ++j){
             if(this->parent->Graph[i][j] != nullptr){
                 QGraphicsLineItem* line = new QGraphicsLineItem(this->parent->Graph[i][i]->x() + radius, this->parent->Graph[i][i]->y()+ radius, this->parent->Graph[i][j]->x()+ radius, this->parent->Graph[i][j]->y()+ radius);
                 this->addItem(line);
             }
         }
+        QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem(this->parent->Graph[i][i]->x(), this->parent->Graph[i][i]->y(), radius*2, radius*2);
+        if(i==whereClicked){
+            ellipse->setBrush(Qt::blue);
+        }else{
+            ellipse->setBrush(Qt::green);
+        }
+        QGraphicsTextItem *text = new QGraphicsTextItem(QString::number(i+1));
+        text->setPos(this->parent->Graph[i][i]->x() + 12, this->parent->Graph[i][i]->y()+ 8);
+
+        this->addItem(ellipse);
+        this->addItem(text);
+
     }
 
 }
