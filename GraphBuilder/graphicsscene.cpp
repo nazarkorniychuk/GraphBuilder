@@ -46,6 +46,8 @@ void GraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
         if(flag){
             this->parent->Graph[this->parent->NumberOfDots][this->parent->NumberOfDots] = new QPoint(mouseEvent->scenePos().x() - radius, mouseEvent->scenePos().y() - radius);
             this->parent->NumberOfDots++;
+            this->isClicked = false;
+            this->whereClicked = -1;
         }
     }
     this->UpdateScene();

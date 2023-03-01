@@ -1,6 +1,5 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <QGraphicsView>
 #include <QGraphicsScene>
@@ -9,6 +8,9 @@
 #include <QPointF>
 #include <QList>
 #include <QVector2D>
+
+class GraphicsScene;
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -22,6 +24,8 @@ public:
     ~MainWindow();
     QPoint* Graph[50][50]{};
     int NumberOfDots = 0;
+    QPoint* parse(int i, QString* str);
+    GraphicsScene* scene;
 public slots:
     void open();
     void save();
