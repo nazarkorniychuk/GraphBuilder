@@ -29,6 +29,7 @@ public:
 public slots:
     void open();
     void save();
+    void exit();
 private:
     Ui::MainWindow *ui;
 };

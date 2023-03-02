@@ -22,9 +22,11 @@ MainWindow::MainWindow(QWidget *parent)
     this->resize(600, 600);
     this->setCentralWidget(view);
     QMenuBar *menu = new QMenuBar(this);
-    QMenu *file = new QMenu("&File");
+    QMenu *file = new QMenu("&Files");
     file->addAction("Open", this, SLOT(open()));
     file->addAction("Save", this, SLOT(save()));
+    file->addAction("Exіt", this, SLOT(exit()));
+
     menu->addMenu(file);
 }
 
@@ -142,6 +144,11 @@ void MainWindow::save()
     }
 
     file.close();
+}
+
+void MainWindow::exit()
+{
+    QCoreApplication::exit();
 }
 
 
