@@ -983,7 +983,20 @@ CMakeFiles/GraphBuilder.dir/graphicsscene.cpp.o: /Users/nkorniychuk/Documents/Gr
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
   /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qframe.h \
   /opt/local/libexec/qt5/lib/QtGui.framework/Headers/QVector2D \
-  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qvector2d.h
+  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qvector2d.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QThread \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qthread.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qelapsedtimer.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QTime \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdatetime.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QTimer \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qtimer.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qbasictimer.h \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QEventLoop \
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qeventloop.h
 
 CMakeFiles/GraphBuilder.dir/main.cpp.o: /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/main.cpp \
   /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/mainwindow.h \
@@ -2043,6 +2056,14 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qapplication.h:
 
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/QEventLoop:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/QTime:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qthread.h:
+
 /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QGraphicsPathItem:
 
 /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qpainterpath.h:
@@ -2169,6 +2190,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qstring.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/stable_partition.h:
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qobjectdefs_impl.h:
@@ -2265,6 +2288,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/mismatch.h:
 
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/QTimer:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/max_element.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__string:
@@ -2316,6 +2341,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QVariant:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdeadlinetimer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
@@ -2398,6 +2425,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/default_searcher.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/bind_front.h:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/QThread:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/binary_negate.h:
 
@@ -2715,6 +2744,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
 
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qelapsedtimer.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_uintmax_t.h:
 
 /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/mainwindow.cpp:
@@ -2909,6 +2940,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/signal.h:
 
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qbasictimer.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/exception:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h:
@@ -2991,6 +3024,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_wint_t.h:
 
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qtimer.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qcompilerdetection.h:
@@ -3024,6 +3059,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/comp_ref_type.h:
+
+/opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdatetime.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/version:
 

@@ -23,11 +23,14 @@ MainWindow::MainWindow(QWidget *parent)
     this->setCentralWidget(view);
     QMenuBar *menu = new QMenuBar(this);
     QMenu *file = new QMenu("&Files");
+    QMenu *tool = new QMenu("&Tools");
     file->addAction("Open", this, SLOT(open()));
     file->addAction("Save", this, SLOT(save()));
     file->addAction("Exіt", this, SLOT(exit()));
+    tool->addAction("Пошук у ширину", this, SLOT(BFS()));
 
     menu->addMenu(file);
+    menu->addMenu(tool);
 }
 
 MainWindow::~MainWindow()
@@ -149,6 +152,11 @@ void MainWindow::save()
 void MainWindow::exit()
 {
     QCoreApplication::exit();
+}
+
+void MainWindow::BFS()
+{
+    this->scene->BFS();
 }
 
 

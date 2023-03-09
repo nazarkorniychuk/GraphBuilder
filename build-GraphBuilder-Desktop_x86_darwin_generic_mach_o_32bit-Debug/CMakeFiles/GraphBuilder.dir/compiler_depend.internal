@@ -986,6 +986,19 @@ CMakeFiles/GraphBuilder.dir/graphicsscene.cpp.o
  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qframe.h
  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/QVector2D
  /opt/local/libexec/qt5/lib/QtGui.framework/Headers/qvector2d.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QThread
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qthread.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdeadlinetimer.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qelapsedtimer.h
+ /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future
+ /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QTime
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qdatetime.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QTimer
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qtimer.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qbasictimer.h
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QEventLoop
+ /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qeventloop.h
 
 CMakeFiles/GraphBuilder.dir/main.cpp.o
  /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/main.cpp

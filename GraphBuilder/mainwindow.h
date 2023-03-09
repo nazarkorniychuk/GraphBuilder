@@ -30,6 +30,7 @@ public slots:
     void open();
     void save();
     void exit();
+    void BFS();
 private:
     Ui::MainWindow *ui;
 };

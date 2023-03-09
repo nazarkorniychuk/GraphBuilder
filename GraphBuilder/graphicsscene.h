@@ -17,8 +17,10 @@ public:
     MainWindow* parent;
     void UpdateScene();
     void DeleteDot(int a);
-    bool isClicked = false;
-    int whereClicked;
+    QList<int> whereClicked;
+    int whereClickedS = -1;
+    void BFS();
+    void sleep(int x);
 };
 
 #endif // GRAPHICSSCENE_H
