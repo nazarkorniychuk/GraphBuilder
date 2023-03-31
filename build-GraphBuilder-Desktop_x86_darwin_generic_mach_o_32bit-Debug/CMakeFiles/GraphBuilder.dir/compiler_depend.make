@@ -996,7 +996,10 @@ CMakeFiles/GraphBuilder.dir/graphicsscene.cpp.o: /Users/nkorniychuk/Documents/Gr
   /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qtimer.h \
   /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qbasictimer.h \
   /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QEventLoop \
-  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qeventloop.h
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qeventloop.h \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QMessageBox \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qdialog.h
 
 CMakeFiles/GraphBuilder.dir/main.cpp.o: /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/main.cpp \
   /Users/nkorniychuk/Documents/GraphBuilder/GraphBuilder/mainwindow.h \
@@ -2026,8 +2029,6 @@ CMakeFiles/GraphBuilder.dir/mainwindow.cpp.o: /Users/nkorniychuk/Documents/Graph
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QString:
 
-/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qdialog.h:
-
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qfileinfo.h:
 
 /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qfiledialog.h:
@@ -2055,6 +2056,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qcoreapplication.h:
 
 /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qapplication.h:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qdialog.h:
 
 /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QEventLoop:
 
@@ -2297,6 +2300,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/memory:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/iter_swap.h:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qmessagebox.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/remove_if.h:
 
@@ -2857,6 +2862,8 @@ GraphBuilder_autogen/include/ui_mainwindow.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_mbstate_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/machine/_mcontext.h:
+
+/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QMessageBox:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/default_sentinel.h:
 

@@ -508,4 +508,7 @@ CMakeFiles/GraphBuilder.dir/graphicsscene.cpp.o: \
   /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qtimer.h \
   /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qbasictimer.h \
   /opt/local/libexec/qt5/lib/QtCore.framework/Headers/QEventLoop \
-  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qeventloop.h
+  /opt/local/libexec/qt5/lib/QtCore.framework/Headers/qeventloop.h \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/QMessageBox \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /opt/local/libexec/qt5/lib/QtWidgets.framework/Headers/qdialog.h

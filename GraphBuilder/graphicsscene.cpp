@@ -5,6 +5,7 @@
 #include <QTime>
 #include <QTimer>
 #include <QEventLoop>
+#include <QMessageBox>
 GraphicsScene::GraphicsScene(QObject *parent) : QGraphicsScene(parent)
 {
     this->setBackgroundBrush(Qt::gray);
@@ -130,6 +131,7 @@ void GraphicsScene::BFS()
         this->whereClickedS = -1;
         visited.push_back(this->whereClicked[0]);
         while(visited.length() != this->parent->NumberOfDots){
+            int Len = visited.length();
             QList<int> t;
             for(int i = 0; i < this->whereClicked.length(); ++i){
                 for(int j = 0; j < 50; ++j){
@@ -147,17 +149,20 @@ void GraphicsScene::BFS()
                 }
             }
             this->whereClicked = t;
-            for(int i = 0; i < this->whereClicked.length(); ++i){
-                qDebug() << this->whereClicked[i] << " ";
+            if(Len == visited.length()){
+                break;
             }
             this->sleep(3000);
             this->UpdateScene();
-
-            qDebug() << "SleepEND";
         }
         this->sleep(3000);
         this->whereClicked.clear();
         this->UpdateScene();
+    }
+    if(visited.length() == this->parent->NumberOfDots){
+        QMessageBox::about(this->parent, "Чи звязний граф?", "Граф - звязний");
+    }else{
+        QMessageBox::about(this->parent, "Чи звязний граф?", "Граф - не звязний");
     }
 }
 
