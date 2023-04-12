@@ -16,6 +16,7 @@ public:
     virtual void mousePressEvent(QGraphicsSceneMouseEvent * mouseEvent);
     MainWindow* parent;
     void UpdateScene();
+    QList<int> visited;
     void DeleteDot(int a);
     QList<int> whereClicked;
     int whereClickedS = -1;

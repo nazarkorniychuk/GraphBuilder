@@ -87,6 +87,17 @@ void GraphicsScene::UpdateScene()
         this->addItem(ellipse);
         this->addItem(text);
     }
+
+    for(int i = 0; i < this->visited.length(); ++i){
+        QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem(this->parent->Graph[this->visited[i]][this->visited[i]]->x(), this->parent->Graph[this->visited[i]][this->visited[i]]->y(), radius*2, radius*2);
+        ellipse->setBrush(Qt::yellow);
+
+        QGraphicsTextItem *text = new QGraphicsTextItem(QString::number(this->visited[i]+1));
+        text->setPos(this->parent->Graph[this->visited[i]][this->visited[i]]->x() + 12, this->parent->Graph[this->visited[i]][this->visited[i]]->y()+ 8);
+
+        this->addItem(ellipse);
+        this->addItem(text);
+    }
     for(int i = 0; i < this->whereClicked.length(); ++i){
         QGraphicsEllipseItem* ellipse = new QGraphicsEllipseItem(this->parent->Graph[this->whereClicked[i]][this->whereClicked[i]]->x(), this->parent->Graph[this->whereClicked[i]][this->whereClicked[i]]->y(), radius*2, radius*2);
         ellipse->setBrush(Qt::red);
@@ -125,7 +136,7 @@ void GraphicsScene::DeleteDot(int a)
 
 void GraphicsScene::BFS()
 {
-    QList<int> visited;
+
     if(this->whereClickedS > -1){
         this->whereClicked.push_back(this->whereClickedS);
         this->whereClickedS = -1;
@@ -164,6 +175,7 @@ void GraphicsScene::BFS()
     }else{
         QMessageBox::about(this->parent, "Чи звязний граф?", "Граф - не звязний");
     }
+    this->visited.clear();
 }
 
 void GraphicsScene::sleep(int x)
