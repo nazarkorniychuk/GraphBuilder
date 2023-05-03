@@ -14,17 +14,15 @@ GraphicsScene::GraphicsScene(QObject *parent) : QGraphicsScene(parent)
 void GraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
     int radius = 20;
-    qDebug() << "mouse";
     if(this->parent->NumberOfDots <= 49){
         bool flag = true;
         for(int i = 0; i < this->parent->NumberOfDots; ++i){
             if(((this->parent->Graph[i][i]->x() - mouseEvent->scenePos().x() + radius)*(this->parent->Graph[i][i]->x() - mouseEvent->scenePos().x() + radius) + (this->parent->Graph[i][i]->y() - mouseEvent->scenePos().y() + radius)*(this->parent->Graph[i][i]->y() - mouseEvent->scenePos().y() + radius)) < (radius) * (radius)){
-                qDebug() << "InDot";
+
                 if(whereClickedS > -1){
                     if(whereClickedS == i){
                         this->DeleteDot(i);
                         this->whereClickedS = -1;
-                        qDebug() << "1";
                     }else{
                         if(this->parent->Graph[whereClickedS][i] == nullptr){
                             this->parent->Graph[whereClickedS][i] = this->parent->Graph[i][i];
@@ -57,7 +55,6 @@ void GraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
 
 void GraphicsScene::UpdateScene()
 {
-    qDebug() << "Update";
     int radius = 20;
     this->clear();
     for(int i = 0; i < this->parent->NumberOfDots; ++i){
@@ -108,7 +105,6 @@ void GraphicsScene::UpdateScene()
         this->addItem(ellipse);
         this->addItem(text);
     }
-    qDebug() << "UpdateEND";
 }
 
 void GraphicsScene::DeleteDot(int a)
@@ -167,6 +163,65 @@ void GraphicsScene::BFS()
             this->UpdateScene();
         }
         this->sleep(3000);
+        this->whereClicked.clear();
+        this->UpdateScene();
+    }
+    if(visited.length() == this->parent->NumberOfDots){
+        QMessageBox::about(this->parent, "Чи звязний граф?", "Граф - звязний");
+    }else{
+        QMessageBox::about(this->parent, "Чи звязний граф?", "Граф - не звязний");
+    }
+    this->visited.clear();
+}
+
+void GraphicsScene::DFS()
+{
+    if(this->whereClickedS > -1){
+        this->whereClicked.push_back(this->whereClickedS);
+        this->whereClickedS = -1;
+        this->visited.push_back(this->whereClicked[0]);
+        QList<int> QuequVisited;
+        QuequVisited.push_back(this->whereClicked[0]);
+        while(this->visited.length() != this->parent->NumberOfDots){
+            bool Step = false;
+            for(int i = 0; i < 50; ++i){
+                Step = false;
+                for(int j = 0; j < this->visited.length(); ++j){
+                    if((i != this->visited[j]) && (this->parent->Graph[this->whereClicked[0]][i] != nullptr) && (this->whereClicked[0] != i)){
+                        Step = true;
+                    }else if(i == this->visited[j]){
+                        Step = false;
+                        break;
+                    }
+                }
+                if(Step){
+                    this->whereClicked[0] = i;
+                    visited.push_back(this->whereClicked[0]);
+                    QuequVisited.push_back(this->whereClicked[0]);
+                    break;
+                }
+            }
+            if(!Step){
+                qDebug() << "!STEP" << this->whereClicked[0];
+
+                if(QuequVisited.length() > 1){
+                    this->whereClicked[0] = QuequVisited[QuequVisited.length() - 2];
+                    QuequVisited.pop_back();
+                }else{
+                    break;
+                }
+                for(int t = 0; t < QuequVisited.length(); ++t){
+                    qDebug() << "Visited" << QuequVisited[t];
+                }
+
+            }
+
+
+
+            this->sleep(500);
+            this->UpdateScene();
+        }
+        this->sleep(500);
         this->whereClicked.clear();
         this->UpdateScene();
     }

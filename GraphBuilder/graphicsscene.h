@@ -21,6 +21,7 @@ public:
     QList<int> whereClicked;
     int whereClickedS = -1;
     void BFS();
+    void DFS();
     void sleep(int x);
 };
 

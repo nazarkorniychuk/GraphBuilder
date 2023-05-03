@@ -26,13 +26,14 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_MainWindow_t {
-    uint offsetsAndSizes[12];
+    uint offsetsAndSizes[14];
     char stringdata0[11];
     char stringdata1[5];
     char stringdata2[1];
     char stringdata3[5];
     char stringdata4[5];
     char stringdata5[4];
+    char stringdata6[4];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MainWindow_t::offsetsAndSizes) + ofs), len 
@@ -43,14 +44,16 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
         QT_MOC_LITERAL(16, 0),  // ""
         QT_MOC_LITERAL(17, 4),  // "save"
         QT_MOC_LITERAL(22, 4),  // "exit"
-        QT_MOC_LITERAL(27, 3)   // "BFS"
+        QT_MOC_LITERAL(27, 3),  // "BFS"
+        QT_MOC_LITERAL(31, 3)   // "DFS"
     },
     "MainWindow",
     "open",
     "",
     "save",
     "exit",
-    "BFS"
+    "BFS",
+    "DFS"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -61,7 +64,7 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -69,12 +72,14 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   38,    2, 0x0a,    1 /* Public */,
-       3,    0,   39,    2, 0x0a,    2 /* Public */,
-       4,    0,   40,    2, 0x0a,    3 /* Public */,
-       5,    0,   41,    2, 0x0a,    4 /* Public */,
+       1,    0,   44,    2, 0x0a,    1 /* Public */,
+       3,    0,   45,    2, 0x0a,    2 /* Public */,
+       4,    0,   46,    2, 0x0a,    3 /* Public */,
+       5,    0,   47,    2, 0x0a,    4 /* Public */,
+       6,    0,   48,    2, 0x0a,    5 /* Public */,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -99,6 +104,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'exit'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'BFS'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'DFS'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -114,6 +121,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->save(); break;
         case 2: _t->exit(); break;
         case 3: _t->BFS(); break;
+        case 4: _t->DFS(); break;
         default: ;
         }
     }
@@ -139,13 +147,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

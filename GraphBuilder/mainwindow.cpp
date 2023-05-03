@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     file->addAction("Save", this, SLOT(save()));
     file->addAction("Exіt", this, SLOT(exit()));
     tool->addAction("Пошук у ширину", this, SLOT(BFS()));
+    tool->addAction("Пошук у глибину", this, SLOT(DFS()));
 
     menu->addMenu(file);
     menu->addMenu(tool);
@@ -157,6 +158,11 @@ void MainWindow::exit()
 void MainWindow::BFS()
 {
     this->scene->BFS();
+}
+
+void MainWindow::DFS()
+{
+    this->scene->DFS();
 }
 
 
