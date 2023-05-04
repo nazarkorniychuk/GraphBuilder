@@ -31,6 +31,7 @@ public slots:
     void save();
     void exit();
     void BFS();
+    void eulerianPath();
     void DFS();
 private:
     Ui::MainWindow *ui;

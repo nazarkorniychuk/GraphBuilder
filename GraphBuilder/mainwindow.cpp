@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     file->addAction("Exіt", this, SLOT(exit()));
     tool->addAction("Пошук у ширину", this, SLOT(BFS()));
     tool->addAction("Пошук у глибину", this, SLOT(DFS()));
+    tool->addAction("Пошук ейлерівого шляху", this, SLOT(eulerianPath()));
 
     menu->addMenu(file);
     menu->addMenu(tool);
@@ -158,6 +159,11 @@ void MainWindow::exit()
 void MainWindow::BFS()
 {
     this->scene->BFS();
+}
+
+void MainWindow::eulerianPath()
+{
+    this->scene->eulerianPath();
 }
 
 void MainWindow::DFS()

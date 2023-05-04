@@ -22,6 +22,8 @@ public:
     int whereClickedS = -1;
     void BFS();
     void DFS();
+    void eulerianPath();
+    bool hasEulerianPath();
     void sleep(int x);
 };
 

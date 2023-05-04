@@ -233,6 +233,55 @@ void GraphicsScene::DFS()
     this->visited.clear();
 }
 
+void GraphicsScene::eulerianPath()
+{
+    QList<int> QuequVisited;
+    QList<int> Path;
+    int current = this->whereClickedS;
+    Path.push_back(current);
+    this->whereClicked.clear();
+    this->whereClicked.push_back(this->whereClickedS);
+    this->whereClickedS = -1;
+    this->visited.clear();
+    this->visited.push_back(this->whereClicked[0]);
+    if(this->hasEulerianPath()){
+        while(true){
+            Step = false;
+            for(int j = 0; j < Path.length(); ++j){
+                if((i != this->Path[j]) && (this->parent->Graph[this->whereClicked[0]][i] != nullptr) && (this->whereClicked[0] != i)){
+                    Step = true;
+                }else if(i == this->visited[j]){
+                    Step = false;
+                    break;
+                }
+            }
+            if(!Step){
+
+            }
+        }
+
+        QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерового шляху не існує");
+    }else{
+        QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерового шляху не існує");
+    }
+}
+
+bool GraphicsScene::hasEulerianPath()
+{
+    int oddDegreeCount = 0;
+        for (int i = 0; i < this->parent->NumberOfDots; i++) {
+            int degree = 0;
+            for (int j = 0; j < this->parent->NumberOfDots; j++) {
+                degree += int(this->parent->Graph[i][j] != nullptr);
+            }
+
+            if (degree % 2 != 0) {
+                oddDegreeCount++;
+            }
+        }
+        return (oddDegreeCount == 0) || (oddDegreeCount == 2);
+}
+
 void GraphicsScene::sleep(int x)
 {
     QTimer *t= new QTimer();
