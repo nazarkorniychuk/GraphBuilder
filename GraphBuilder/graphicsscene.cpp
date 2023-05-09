@@ -237,37 +237,115 @@ void GraphicsScene::eulerianPath()
 {
     QList<int> QuequVisited;
     QList<int> Path;
+    QList<int> Path1;
+    int t = 0;
     int current = this->whereClickedS;
+    int NumOfE = 0;
+    for(int i = 0; i < this->parent->NumberOfDots; i++){
+        for(int j = 0; j < this->parent->NumberOfDots; j++){
+            if((this->parent->Graph[i][j] != nullptr) && (i != j)){
+                NumOfE++;
+            }
+        }
+    }
+    NumOfE = NumOfE/2;
+    //QuequVisited.push_back(current);
     Path.push_back(current);
     this->whereClicked.clear();
     this->whereClicked.push_back(this->whereClickedS);
     this->whereClickedS = -1;
-    this->visited.clear();
-    this->visited.push_back(this->whereClicked[0]);
+    //this->visited.clear();
+    //this->visited.push_back(this->whereClicked[0]);
     if(this->hasEulerianPath()){
         while(true){
-            Step = false;
-            for(int j = 0; j < Path.length(); ++j){
-                if((i != this->Path[j]) && (this->parent->Graph[this->whereClicked[0]][i] != nullptr) && (this->whereClicked[0] != i)){
+            bool Step = false;
+            for(int i = 0; i < 50; ++i){
+                if(QuequVisited.length() == 0){
+                    if((this->parent->Graph[this->whereClicked[0]][i] != nullptr) && (this->whereClicked[0] != i)){
+                        Step = true;
+                    }
+                }
+                for(int j = 0; j < QuequVisited.length()/2; ++j){
+                    if((!(((i == QuequVisited[2*j]) && ( this->whereClicked[0] == QuequVisited[2*j+1])) || ((i == QuequVisited[2*j + 1]) && ( this->whereClicked[0] == QuequVisited[2*j])))) && (this->parent->Graph[this->whereClicked[0]][i] != nullptr) && (this->whereClicked[0] != i)){
                     Step = true;
-                }else if(i == this->visited[j]){
-                    Step = false;
+                }
+                    else if(((i == QuequVisited[2*j]) && ( this->whereClicked[0] == QuequVisited[2*j+1])) || ((i == QuequVisited[2*j + 1]) && ( this->whereClicked[0] == QuequVisited[2*j]))){
+                        Step = false;
+                        break;
+                    }
+                }
+                if(Step){
+                    t = 0;
+                    QuequVisited.push_back(this->whereClicked[0]);
+                    QuequVisited.push_back(i);
+                    this->whereClicked[0] = i;
+                    Path.push_back(this->whereClicked[0]);
                     break;
                 }
             }
-            if(!Step){
 
+            if(!Step){
+                    if(t == 0){
+                        for(int i = 0; i < Path1.length(); ++i){
+                            Path.push_back(Path1[i]);
+                        }
+                        Path1.clear();
+                        for(int i = Path.length()-1; i >= 0; i--){
+                            Path1.push_back(Path[i]);
+                        }
+                        Path.clear();
+                        t++;
+                        this->whereClicked[0] = Path1.first();
+                        Path.push_back(Path1.first());
+                        Path1.pop_front();
+
+                    }
+                    else{
+                        this->whereClicked[0] = Path1.first();
+                        Path.push_back(Path1.first());
+                        Path1.pop_front();
+                    }
+            }
+
+            this->sleep(500);
+            this->UpdateScene();
+            for(int t = 0; t < Path.length(); ++t){
+                qDebug() << "Path" << Path[t];
+                }
+            qDebug() << "PathF";
+            if((QuequVisited.length()/2 == NumOfE) && (Path1.length() == 0)){
+                break;
             }
         }
-
-        QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерового шляху не існує");
-    }else{
+        for(int i = 0; i < Path.length(); i++){
+            this->whereClicked[0] = Path[i];
+            this->visited.push_back(Path[i]);
+            this->sleep(500);
+            this->UpdateScene();
+        }
+        QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерів існує");
+    }
+    else{
         QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерового шляху не існує");
     }
+    this->whereClicked.clear();
+    this->visited.clear();
 }
 
 bool GraphicsScene::hasEulerianPath()
 {
+    int k = 0;
+    for(int i = 0; i < this->parent->NumberOfDots; i++){
+        for(int j = 0; j < this->parent->NumberOfDots; j++){
+            if((this->parent->Graph[i][j] != nullptr) && (i != j)){
+                k++;
+            }
+        }
+        if(k == 0){
+            return 0;
+        }
+        k = 0;
+    }
     int oddDegreeCount = 0;
         for (int i = 0; i < this->parent->NumberOfDots; i++) {
             int degree = 0;
@@ -275,7 +353,7 @@ bool GraphicsScene::hasEulerianPath()
                 degree += int(this->parent->Graph[i][j] != nullptr);
             }
 
-            if (degree % 2 != 0) {
+            if ((degree-1) % 2 != 0) {
                 oddDegreeCount++;
             }
         }
