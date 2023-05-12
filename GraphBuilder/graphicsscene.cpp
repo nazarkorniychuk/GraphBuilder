@@ -6,6 +6,7 @@
 #include <QTimer>
 #include <QEventLoop>
 #include <QMessageBox>
+#include <QString>
 GraphicsScene::GraphicsScene(QObject *parent) : QGraphicsScene(parent)
 {
     this->setBackgroundBrush(Qt::gray);
@@ -239,7 +240,21 @@ void GraphicsScene::eulerianPath()
     QList<int> Path;
     QList<int> Path1;
     int t = 0;
-    int current = this->whereClickedS;
+    int current = -1;
+    int r = 0;
+    for(int i = 0; i < this->parent->NumberOfDots; i++){
+        r = 0;
+        for(int j = 0; j < this->parent->NumberOfDots; j++){
+            if((this->parent->Graph[i][j] != nullptr) && (i != j)){
+                r++;
+            }
+        }
+        if(r % 2 == 1){
+            this->whereClickedS = i;
+            break;
+        }
+    }
+    current = this->whereClickedS;
     int NumOfE = 0;
     for(int i = 0; i < this->parent->NumberOfDots; i++){
         for(int j = 0; j < this->parent->NumberOfDots; j++){
@@ -276,6 +291,10 @@ void GraphicsScene::eulerianPath()
                 }
                 if(Step){
                     t = 0;
+                    for(int i = 0; i < Path1.length(); ++i){
+                        Path.push_back(Path1[i]);
+                    }
+                    Path1.clear();
                     QuequVisited.push_back(this->whereClicked[0]);
                     QuequVisited.push_back(i);
                     this->whereClicked[0] = i;
@@ -286,10 +305,7 @@ void GraphicsScene::eulerianPath()
 
             if(!Step){
                     if(t == 0){
-                        for(int i = 0; i < Path1.length(); ++i){
-                            Path.push_back(Path1[i]);
-                        }
-                        Path1.clear();
+
                         for(int i = Path.length()-1; i >= 0; i--){
                             Path1.push_back(Path[i]);
                         }
@@ -317,13 +333,16 @@ void GraphicsScene::eulerianPath()
                 break;
             }
         }
+        QString s = "Path : ";
         for(int i = 0; i < Path.length(); i++){
+            s = s + " " + QString::number(Path[i]+1);
             this->whereClicked[0] = Path[i];
             this->visited.push_back(Path[i]);
             this->sleep(500);
             this->UpdateScene();
         }
-        QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерів існує");
+
+        QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерів існує" + s);
     }
     else{
         QMessageBox::about(this->parent, "Чи існує ейлерів шлях?", "Ейлерового шляху не існує");
