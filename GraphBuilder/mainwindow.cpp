@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     tool->addAction("Пошук у ширину", this, SLOT(BFS()));
     tool->addAction("Пошук у глибину", this, SLOT(DFS()));
     tool->addAction("Пошук ейлерівого шляху", this, SLOT(eulerianPath()));
+    tool->addAction("Пошук найкоротшого шляху", this, SLOT(dijkstra()));
 
     menu->addMenu(file);
     menu->addMenu(tool);
@@ -169,6 +170,18 @@ void MainWindow::eulerianPath()
 void MainWindow::DFS()
 {
     this->scene->DFS();
+}
+
+void MainWindow::dijkstra()
+{
+    if(this->scene->whereClickedS > -1){
+        this->isDijkstra = true;
+        this->start = this->scene->whereClickedS;
+        this->scene->whereClickedS = -1;
+    }else{
+        return;
+    }
+
 }
 
 

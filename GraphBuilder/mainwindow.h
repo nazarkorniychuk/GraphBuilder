@@ -26,6 +26,8 @@ public:
     int NumberOfDots = 0;
     QPoint* parse(int i, QString* str);
     GraphicsScene* scene;
+    bool isDijkstra = false;
+    int start;
 public slots:
     void open();
     void save();
@@ -33,6 +35,7 @@ public slots:
     void BFS();
     void eulerianPath();
     void DFS();
+    void dijkstra();
 private:
     Ui::MainWindow *ui;
 };

@@ -7,6 +7,13 @@
 #include <QEventLoop>
 #include <QMessageBox>
 #include <QString>
+#include <queue>
+#include <vector>
+#include <limits>
+
+#define INF 2147483647
+
+using namespace std;
 GraphicsScene::GraphicsScene(QObject *parent) : QGraphicsScene(parent)
 {
     this->setBackgroundBrush(Qt::gray);
@@ -19,7 +26,13 @@ void GraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
         bool flag = true;
         for(int i = 0; i < this->parent->NumberOfDots; ++i){
             if(((this->parent->Graph[i][i]->x() - mouseEvent->scenePos().x() + radius)*(this->parent->Graph[i][i]->x() - mouseEvent->scenePos().x() + radius) + (this->parent->Graph[i][i]->y() - mouseEvent->scenePos().y() + radius)*(this->parent->Graph[i][i]->y() - mouseEvent->scenePos().y() + radius)) < (radius) * (radius)){
-
+                if(this->parent->isDijkstra){
+                    int end = i;
+                    this->dijkstra(this->parent->start, end);
+                    this->parent->isDijkstra = false;
+                    this->parent->start = -1;
+                    return;
+                }
                 if(whereClickedS > -1){
                     if(whereClickedS == i){
                         this->DeleteDot(i);
@@ -49,6 +62,8 @@ void GraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
             this->parent->Graph[this->parent->NumberOfDots][this->parent->NumberOfDots] = new QPoint(mouseEvent->scenePos().x() - radius, mouseEvent->scenePos().y() - radius);
             this->parent->NumberOfDots++;
             this->whereClickedS = -1;
+            this->parent->isDijkstra = false;
+            this->parent->start = -1;
         }
     }
     this->UpdateScene();
@@ -378,6 +393,80 @@ bool GraphicsScene::hasEulerianPath()
         }
         return (oddDegreeCount == 0) || (oddDegreeCount == 2);
 }
+
+void GraphicsScene::dijkstra(int start, int end)
+{
+
+    int vertices = this->parent->NumberOfDots;
+    int graph[vertices][vertices];
+    for(int i = 0; i < vertices; i++){
+        for(int j = 0; j < vertices; j++){
+            if(this->parent->Graph[i][j] != nullptr){
+                graph[i][j] = 1;
+            }else{
+                graph[i][j] = 0;
+            }
+        }
+    }
+    vector<int> dist(vertices, INF);
+    vector<int> prev(vertices, -1);
+    dist[start] = 0;
+
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    pq.push(make_pair(0, start));
+    this->whereClicked.clear();
+
+
+    while (!pq.empty()) {
+        int u = pq.top().second;
+        pq.pop();
+
+        for (int v = 0; v < vertices; v++) {
+            if (graph[u][v] != 0) {
+                int weight = graph[u][v];
+                if (dist[u] + weight < dist[v]) {
+                    dist[v] = dist[u] + weight;
+                    prev[v] = u;
+                    pq.push(make_pair(dist[v], v));
+
+                }
+            }
+        }
+    }
+
+    if (dist[end] == INF) {
+        QMessageBox::about(this->parent, "Найкоротший шлях", "Шлях не існує" );
+        this->whereClicked.clear();
+        this->whereClickedS = -1;
+        this->UpdateScene();
+        return;
+    }
+
+    QString s = "Найкоротший шлях від вершини " + QString::number(start + 1) + " до вершини " + QString::number(end + 1) + ": ";
+    vector<int> path;
+    int current = end;
+    while (current != -1) {
+        path.push_back(current);
+        current = prev[current];
+    }
+    for (int i = path.size() - 1; i >= 0; i--) {
+        this->whereClicked.push_back(path[i]);
+        this->UpdateScene();
+        this->sleep(500);
+        s = s + QString::number(path[i]+1);
+        if (i != 0) {
+            s = s + " -> ";
+        }
+    }
+    QMessageBox::about(this->parent, "Найкоротший шлях", s );
+    this->whereClicked.clear();
+    this->whereClickedS = -1;
+}
+
+
+
+
+
 
 void GraphicsScene::sleep(int x)
 {
